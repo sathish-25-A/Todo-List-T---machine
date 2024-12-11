@@ -1,0 +1,136 @@
+/* General styling for the app */
+.app {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the form to add tasks */
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  form input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Styling for the task container */
+  .task-list {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Individual task item styling */
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Apply line-through to the task text when it's completed */
+  .task.completed span {
+    text-decoration: line-through;
+    color: #888; /* Dim the color of completed tasks */
+  }
+  
+  /* Ensure buttons are not affected by the completed state */
+  .task button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .task button.edit {
+    background-color: #4CAF50; /* Edit button green */
+  }
+  
+  /* Hover effects for buttons */
+  .task button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Styling for the checkbox */
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the task text */
+  .task span {
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  
+  /* Styling for the "Clear All" button */
+  .clear-all {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .clear-all:hover {
+    opacity: 0.8;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 600px) {
+    form input {
+      width: 180px;
+    }
+  
+    .task-list {
+      width: 90%;
+    }
+  }
+  
